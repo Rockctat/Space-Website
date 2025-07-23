@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GalaxiX — Explore the Cosmos</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>GalaxiX</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="booking.html">Booking</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+ 
+  <section class="home-hero">
+    <div class="glass-card">
+      <h2>Welcome to GalaxiX</h2>
+      <p>Book your interstellar adventure to the Moon, Mars, Europa, or orbit in style.</p>
+      <a class="btn" href="booking.html">Start Your Journey</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2 class="section-title">Why Fly With GalaxiX?</h2>
+    <div class="grid">
+      <div class="feature">
+        <h3> Zero-G Luxury</h3>
+        <p>Private suites, virtual sky domes, and gourmet freeze-dried cuisine.</p>
+      </div>
+      <div class="feature">
+        <h3>Real Astronaut Guides</h3>
+        <p>Every tour is led by seasoned space veterans from NASA, ESA & ISRO.</p>
+      </div>
+      <div class="feature">
+        <h3>Fusion-Powered Shuttles</h3>
+        <p>Our crafts use experimental antimatter cores for near-instant orbits.</p>
+      </div>
+      <div class="feature">
+        <h3>Orbital Hologram Decks</h3>
+        <p>Real-time data streams from deep space missions at your fingertips.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="testimonials">
+    <h2 class="section-title">Passenger Logs</h2>
+    <div class="grid">
+      <blockquote>"I saw the rings of Saturn and cried. Best day of my life." — <strong>Lame Person </strong></blockquote>
+      <blockquote>"Moon gravity made my joints feel 20 again. Sign me up yearly." — <strong>anonoumus </strong></blockquote>
+      <blockquote>"Martian sunsets > Earth sunsets. Deal with it." — <strong>Vikram</strong></blockquote>
+    </div>
+  </section>
+
+  
+  <section class="countdown">
+    <h2 class="section-title">Next Launch Window: Earth to Europa</h2>
+    <div id="launch-timer">Loading countdown...</div>
+  </section>
+
+
+  <section class="faq">
+    <h2 class="section-title">Galactic FAQ</h2>
+    <div>
+      <h4>💸 How much does it cost?</h4>
+      <p>Packages start at 1.2 million credits. Payment in crypto, gold, or uranium accepted.</p>
+      <h4>🧪 What about safety?</h4>
+      <p>99.99% survival rate. All travelers undergo anti-nausea and vacuum exposure training.</p>
+      <h4>📦 What can I carry?</h4>
+      <p>Up to 15kg of essentials. No black holes, laser sabers, or alien pets allowed onboard.</p>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2125 GalaxiX Interplanetary Travel Corp. All Rights Reserved.</p>
+    <p style="font-size: 0.8rem;">Project Stardust ID: #X42-BL99-NEBULA // Render time: ∞</p>
+  </footer>
+
+  <script>
+    const countdown = document.getElementById("launch-timer");
+    const launchDate = new Date("2025-12-01T10:00:00Z").getTime();
+
+    setInterval(() => {
+      const now = new Date().getTime();
+      const diff = launchDate - now;
+
+      if (diff <= 0) {
+        countdown.innerHTML = "Launch in progress 🚀";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((diff / 1000 / 60) % 60);
+      const seconds = Math.floor((diff / 1000) % 60);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+  </script>
+</body>
+</html>

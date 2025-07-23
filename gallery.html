@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>GalaxiX Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0e0e1a;
+  color: #e0d7ff;
+  margin: 0;
+  padding: 0;
+}
+
+header, footer {
+  text-align: center;
+  padding: 1.2rem 1rem;
+  background: #11101f;
+  color: #bb86fc;
+  border-bottom: 2px solid #bb86fc;
+}
+
+footer {
+  border-top: 2px solid #bb86fc;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: #bb86fc;
+}
+
+nav a {
+  color: #e0d7ff;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #bb86fc;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  color: #bb86fc;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.gallery-container img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px rgba(187, 134, 252, 0.3);
+}
+
+.gallery-container img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 20px rgba(187, 134, 252, 0.6);
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+    display: block;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>GalaxiX</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="booking.html">Booking</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Gallery</h2>
+    <div class="gallery-container">
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Milky Way">
+      <img src="https://www.shutterstock.com/image-photo/lonely-astronaut-walks-on-lunar-600nw-2541071533.jpg" alt="Moonwalk">
+      <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Mars Habitat">
+      <img src="https://media.istockphoto.com/id/1394088707/photo/moon-in-outer-space.jpg?s=612x612&w=0&k=20&c=RQG-UDKDxtg_2EMcdulXnqngJRKOL8biisKAHN27s7Q=" alt="Europa Ice">
+      <img src="https://media.istockphoto.com/id/1368257662/photo/cupola-porthole-on-iss-orbital-station-international-space-station-orbit-and-deep-space-with.jpg?s=612x612&w=0&k=20&c=rwjWSyxSnBrW5a6iaWxRu25ovOuLy4358cBw6bcQP1s=" alt="Orbital Window">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2125 GalaxiX. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
